@@ -1,5 +1,5 @@
 import React from "react";
-import Head from 'next/head'
+import Head from 'next/head';
 import db from '../../../db.json';
 
 export default function Header() {
