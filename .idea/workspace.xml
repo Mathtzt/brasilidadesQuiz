@@ -27,7 +27,7 @@
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="RunOnceActivity.ShowReadmeOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../aluraquiz-base" />
     <property name="node.js.detected.package.eslint" value="true" />
     <property name="node.js.detected.package.tslint" value="true" />
     <property name="node.js.path.for.package.eslint" value="project" />
@@ -55,7 +55,8 @@
       <updated>1611615640771</updated>
       <workItem from="1611615644071" duration="1982000" />
       <workItem from="1611618539900" duration="6951000" />
-      <workItem from="1611661664428" duration="7746000" />
+      <workItem from="1611661664428" duration="8617000" />
+      <workItem from="1611698722433" duration="5215000" />
     </task>
     <servers />
   </component>

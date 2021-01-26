@@ -35,17 +35,17 @@ export default function Home() {
                 <p>Teste seus conhecimentos e prove que não é um estrangeiro por aqui!</p>
               </Widget.Content>
             </Widget>
-              <Widget>
-                <Widget.Header>
-                  <h1>Quizes da Galera</h1>
-                </Widget.Header>
-                <Widget.Content>
+            <Widget>
+              <Widget.Header>
+                <h1>Quizes da Galera</h1>
+              </Widget.Header>
+              <Widget.Content>
                 <p>Encontre outros quizes fantásticos feitos pela galera durante a Imersão React Next.js da Alura:</p>
               </Widget.Content>
             </Widget>
             <Footer />
           </QuizContainer>
-          <GitHubCorner projectUrl={'https://github.com/Mathtzt'} />
+          <GitHubCorner projectUrl='https://github.com/Mathtzt' />
         </QuizBackground>
   )
 }
