@@ -40,16 +40,19 @@
     <property name="project.structure.side.proportion" value="0.2" />
     <property name="settings.editor.selected.configurable" value="preferences.pluginManager" />
   </component>
+  <component name="RecentsManager">
+    <key name="MoveFile.RECENT_KEYS">
+      <recent name="F:\Git\imersao-react\quiz\public\images" />
+    </key>
+  </component>
   <component name="RunManager">
-    <configuration default="true" type="ArquillianTestNG" factoryName="" nameIsGenerated="true">
+    <configuration default="true" type="ArquillianJUnit" factoryName="" nameIsGenerated="true">
       <option name="arquillianRunConfiguration">
         <value>
           <option name="containerStateName" value="" />
         </value>
       </option>
-      <option name="TEST_OBJECT" value="CLASS" />
-      <properties />
-      <listeners />
+      <option name="TEST_OBJECT" value="class" />
       <method v="2">
         <option name="Make" enabled="true" />
       </method>
@@ -64,7 +67,8 @@
       <option name="presentableId" value="Default" />
       <updated>1611615640771</updated>
       <workItem from="1611615644071" duration="1982000" />
-      <workItem from="1611618539900" duration="6225000" />
+      <workItem from="1611618539900" duration="6951000" />
+      <workItem from="1611661664428" duration="4912000" />
     </task>
     <servers />
   </component>

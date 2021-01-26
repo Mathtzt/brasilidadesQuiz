@@ -7,6 +7,7 @@ import QuizBackground from '../src/components/QuizBackground'
 import Header from '../src/components/Header'
 import Footer from '../src/components/Footer'
 import GitHubCorner from '../src/components/GitHubCorner'
+import QuizLogo from "../src/components/QuizLogo";
 
 export const QuizContainer = styled.div`
   width: 100%;
@@ -24,12 +25,14 @@ export default function Home() {
         <QuizBackground backgroundImage={db.bg}>
           <Header />
           <QuizContainer>
+            <QuizLogo />
             <Widget>
               <Widget.Header>
-                <h1>The Legend of Code</h1>
+                <h1>Brasilidades</h1>
               </Widget.Header>
               <Widget.Content>
-                <p>lorem ipsum dolor sit amet...</p>
+                <p>Você <b>realmente</b> conhece o Brasil?</p>
+                <p>Teste seus conhecimentos e prove que não é um estrangeiro por aqui!</p>
               </Widget.Content>
             </Widget>
               <Widget>
@@ -37,7 +40,7 @@ export default function Home() {
                   <h1>Quizes da Galera</h1>
                 </Widget.Header>
                 <Widget.Content>
-                <p>lorem ipsum dolor sit amet...</p>
+                <p>Encontre outros quizes fantásticos feitos pela galera durante a Imersão React Next.js da Alura:</p>
               </Widget.Content>
             </Widget>
             <Footer />
