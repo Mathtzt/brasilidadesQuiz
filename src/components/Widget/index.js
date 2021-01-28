@@ -47,6 +47,11 @@ Widget.Content = styled.div`
     list-style: none;
     padding: 0;
   }
+  
+  svg {
+    display: flex;
+    margin: auto;
+  }
 `;
 
 Widget.Topic = styled.a`

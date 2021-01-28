@@ -1,5 +1,8 @@
 import React from "react";
 
+import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
+import Loader from 'react-loader-spinner'
+
 import db from '../db.json';
 import QuizBackground from "../src/components/QuizBackground";
 import QuizLogo from "../src/components/QuizLogo";
@@ -48,10 +51,10 @@ function LoadingWidget() {
     return(
         <Widget>
             <Widget.Header>
-                Carregando...
+                Preparado? ...
             </Widget.Header>
             <Widget.Content>
-                [Desafio do Loading]
+                <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} padding={'15px'}/>
             </Widget.Content>
         </Widget>
     );
