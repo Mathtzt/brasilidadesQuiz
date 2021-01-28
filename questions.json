@@ -1,10 +1,7 @@
 {
-  "bg": "/images/bg-main.jpg",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
     {
-      "image": "/images/questoes/q1-facil.jpg",
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Quantos unidades federativas tem o Brasil?",
       "description": "",
       "answer": 2,
@@ -16,7 +13,7 @@
       ]
     },
     {
-      "image": "/images/questoes/q2-facil.jpg",
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Qual é um das maravilhas do mundo situada no Brasil?",
       "description": "",
       "answer": 1,
@@ -28,7 +25,7 @@
       ]
     },
     {
-      "image": "/images/questoes/q3-facil.jpg",
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Qual estado não foi capital do Brasil?",
       "description": "",
       "answer": 3,
@@ -40,7 +37,7 @@
       ]
     },
     {
-      "image": "/images/questoes/q4-facil.jpg",
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Qual é o estado mais populoso?",
       "description": "",
       "answer": 0,
@@ -52,7 +49,7 @@
       ]
     },
     {
-      "image": "/images/questoes/q5-facil.jpg",
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
       "title": "Quem proclamou a Independência do Brasil?",
       "description": "",
       "answer": 2,
@@ -64,19 +61,32 @@
       ]
     }
   ],
-  "external": [
-    ""
+  "questionsMedium": [
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "Como fazer um seletor por id via CSS?",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
+      "alternatives": [
+        ".elemento",
+        "*elemento",
+        "#elemento",
+        "%elemento"
+      ]
+    }
   ],
-  "theme": {
-    "colors": {
-      "primary": "#162448",
-      "secondary": "#8fc4f0",
-      "mainBg": "#1C1814",
-      "secondaryBg": "#FFFFFF",
-      "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
-      "success": "#4CAF50"
-    },
-    "borderRadius": "4px"
-  }
+  "questionsDifficult": [
+    {
+      "image": "https://media.giphy.com/media/xUOxf3yDKCuwpOlT3i/giphy.gif",
+      "title": "Como fazer um seletor por id via CSS?",
+      "description": "Essa é pra aquecer",
+      "answer": 2,
+      "alternatives": [
+        ".elemento",
+        "*elemento",
+        "#elemento",
+        "%elemento"
+      ]
+    }
+  ]
 }
