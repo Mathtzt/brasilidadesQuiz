@@ -19,6 +19,12 @@ const screenStates = {
     RESULT: 'result'
 }
 
+const dificuldadeStates = {
+    FACIL: 'facil',
+    MEDIO: 'medio',
+    DIFICIL: 'dificil'
+}
+
 function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addResult}) {
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
     const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
@@ -98,12 +104,24 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
     )
 }
 
+function getQuestoesByDificuldade() {
+    const nivel = getRouterParams().nv;
+    if (nivel === dificuldadeStates.DIFICIL) {
+        return db.questionsDifficult;
+    } else if (nivel === dificuldadeStates.MEDIO) {
+        return db.questionsMedium;
+    } else {
+        return db.questions;
+    }
+}
+
 export default function QuizPage() {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING);
     const [questionIndex, setQuestionIndex] = React.useState(0);
     const [results, setResults] = React.useState([]);
-    const question = db.questions[questionIndex];
-    const totalQuestions = db.questions.length;
+    const dificuldadeQuestions = getQuestoesByDificuldade();
+    const question = dificuldadeQuestions[questionIndex];
+    const totalQuestions = dificuldadeQuestions.length;
 
     function addResult(result) {
         setResults([
@@ -167,8 +185,7 @@ function getSomatorioAcertosQuiz(results) {
 }
 
 function ResultWidget({results}) {
-    const router = useRouter()
-    const params = router.query;
+    const params = getRouterParams();
 
     return(
         <Widget>
@@ -207,4 +224,9 @@ function LoadingWidget() {
             </Widget.Content>
         </Widget>
     );
+}
+
+function getRouterParams() {
+    const router = useRouter();
+    return router.query;
 }

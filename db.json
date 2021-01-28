@@ -67,124 +67,124 @@
   "questionsMedium": [
     {
       "image": "/images/questoes/q1-medio.jpg",
-      "title": "",
+      "title": "Qual a região com mais estados?",
       "description": "",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Norte",
+        "Nordeste",
+        "Centro-Oeste",
+        "Sudeste"
       ]
     },
     {
       "image": "/images/questoes/q2-medio.jpg",
       "title": "",
-      "description": "",
-      "answer": 1,
+      "description": "Qual a maior ponte do Brasil?",
+      "answer": 0,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Ponte Presidente Costa e Silva (RJ)",
+        "Ponte Rodoferroviário (PR)",
+        "Ponte Ayrton Senna (MT-PR)",
+        "Ponte Octávio Frias de Oliveira (SP)"
       ]
     },
     {
       "image": "/images/questoes/q3-medio.jpg",
-      "title": "",
+      "title": "As cataratas do Iguaçu estão localizadas em qual estado?",
       "description": "",
-      "answer": 3,
+      "answer": 2,
       "alternatives": [
-        "",
-        "R",
-        "",
-        ""
+        "Rio Grande do Sul",
+        "Amazonas",
+        "Paraná",
+        "Mato Grosso do Sul"
       ]
     },
     {
       "image": "/images/questoes/q4-medio.jpg",
-      "title": "",
+      "title": "A Chapada dos Veadeiros está localizada em qual estado?",
       "description": "",
-      "answer": 0,
+      "answer": 1,
       "alternatives": [
-        "S",
-        "",
-        "",
-        ""
+        "Tocantins",
+        "Goiás",
+        "Pernambuco",
+        "Pará"
       ]
     },
     {
       "image": "/images/questoes/q5-medio.jpg",
-      "title": "Quem proclamou a Independência do Brasil?",
+      "title": "Em qual cidade fica localizado o farol da barra?",
       "description": "",
-      "answer": 2,
+      "answer": 3,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Rio de Janeiro",
+        "Natal",
+        "Recife",
+        "Salvador"
       ]
     }
   ],
   "questionsDifficult": [
     {
       "image": "/images/questoes/q1-dificil.jpg",
-      "title": "",
+      "title": "Qual a ilha brasileira mais distantes da costa?",
       "description": "",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Fernando de Noronha",
+        "Trindade e São Martin",
+        "Atol das Rocas",
+        "São Pedro e São Paulo"
       ]
     },
     {
       "image": "/images/questoes/q2-dificil.jpg",
-      "title": "",
+      "title": "Rio mais volumoso do Brasil?",
       "description": "",
-      "answer": 1,
+      "answer": 3,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Rio São Francisco",
+        "Rio Solimões",
+        "Rio Negro",
+        "Rio Amazonas"
       ]
     },
     {
       "image": "/images/questoes/q3-dificil.jpg",
-      "title": "",
+      "title": "Quantos presidentes o Brasil já teve, incluindo o atual?",
       "description": "",
-      "answer": 3,
+      "answer": 2,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "40",
+        "39",
+        "38",
+        "37"
       ]
     },
     {
       "image": "/images/questoes/q4-dificil.jpg",
-      "title": "",
+      "title": "Qual o principal produto exportado pelo Brasil?",
       "description": "",
       "answer": 0,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Soja",
+        "Café",
+        "Petróleo",
+        "Milho"
       ]
     },
     {
       "image": "/images/questoes/q5-dificil.jpg",
-      "title": "",
+      "title": "Qual a cidade brasileira com menor população?",
       "description": "",
       "answer": 2,
       "alternatives": [
-        "",
-        "",
-        "",
-        ""
+        "Borá (SP)",
+        "Araguainha (MT)",
+        "Serra da Saudade (MG)",
+        "Santa Rosa do Purus (AC)"
       ]
     }
   ],
