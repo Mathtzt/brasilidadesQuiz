@@ -1,5 +1,5 @@
 {
-  "bg": "/images/brazil-wlpp.jpg",
+  "bg": "/images/bg-main.jpg",
   "title": "Quiz CSS da Alura",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
@@ -31,8 +31,8 @@
   ],
   "theme": {
     "colors": {
-      "primary": "#4CAF50",
-      "secondary": "#FF9800",
+      "primary": "#162448",
+      "secondary": "#8fc4f0",
       "mainBg": "#1C1814",
       "secondaryBg": "#FFFFFF",
       "contrastText": "#FFFFFF",

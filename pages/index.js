@@ -24,7 +24,7 @@ export default function Home() {
             <QuizLogo />
             <Widget>
               <Widget.Header>
-                <h1>Brasilidades</h1>
+                <h1>Brasilidades Quiz</h1>
               </Widget.Header>
               <Widget.Content>
                 <p>Você <b>realmente</b> conhece o Brasil?</p>
