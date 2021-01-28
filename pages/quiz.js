@@ -21,7 +21,12 @@ function LoadingWidget() {
 }
 
 function QuestionWidget({question, totalQuestions, questionIndex, onSubmit}) {
+    const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
+    const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
     const questionId = `question_${questionIndex}`
+    const isCorrect = selectedAlternative === question.answer;
+    const hasAlternativeSelected = selectedAlternative !== undefined;
+
     return (
         <Widget>
             <Widget.Header>
@@ -50,28 +55,39 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit}) {
 
                 <form onSubmit={(event) => {
                     event.preventDefault();
-                    onSubmit();
+                    setIsQuestionSubmited(true);
+                    setTimeout(() => {
+                        setIsQuestionSubmited(false);
+                        setSelectedAlternative(undefined)
+                        onSubmit();
+                    }, 2000)
                 }}>
                     {question.alternatives.map((alternative, index) => {
                         const alternativeId = `alternativeId_${index}`;
                         return (
                             <Widget.Topic
                                 as="label"
+                                key={alternativeId}
                                 htmlFor={alternativeId}
+                                style={{backgroundColor: selectedAlternative === index ? db.theme.colors.secondary : db.theme.colors.primary }}
                             >
                             <input
                                 style={{display: 'none'}}
                                 type="radio"
                                 name={questionId}
                                 id={alternativeId}
+                                onChange={() => setSelectedAlternative(index)}
                             />
                                 {alternative}
                             </Widget.Topic>
                         );
                     })}
-                    <Button type='submit'>
+                    <Button type='submit' disabled={!hasAlternativeSelected}>
                     Confirmar
                     </Button>
+
+                    {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
+                    {isQuestionSubmited && !isCorrect && <p>Você errou!</p>}
                 </form>
             </Widget.Content>
         </Widget>

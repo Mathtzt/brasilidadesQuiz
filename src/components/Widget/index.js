@@ -64,7 +64,10 @@ Widget.Topic = styled.a`
   &:hover,
   &:focus {
     background-color: ${({theme}) => theme.colors.secondary};
+  }
 
+  &:visited {
+    background-color: ${({theme}) => theme.colors.secondary};
   }
 `
 
