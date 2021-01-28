@@ -1,5 +1,6 @@
 {
   "bg": "/images/bg-main.jpg",
+  "bg-meta": "/images/homepage.jpg",
   "title": "Quiz CSS da Alura",
   "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
   "questions": [
