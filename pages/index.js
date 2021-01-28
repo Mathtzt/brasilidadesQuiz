@@ -1,6 +1,8 @@
 import React from "react";
+import 'bootstrap/dist/css/bootstrap.min.css';
 import styled from 'styled-components'
 import { useRouter } from "next/router";
+import Form from 'react-bootstrap/Form';
 
 import db from '../db.json';
 import Widget from '../src/components/Widget'
@@ -16,6 +18,7 @@ import QuizContainer from "../src/components/QuizContainer";
 export default function Home() {
   const router = useRouter();
   const [name, setName] = React.useState('');
+  const [dificuldade, setDificuldade] = React.useState('facil');
 
   return (
         <QuizBackground backgroundImage={db.bg}>
@@ -29,10 +32,21 @@ export default function Home() {
               <Widget.Content>
                 <p>Você <b>realmente</b> conhece o Brasil?</p>
                 <p>Teste seus conhecimentos e prove que não é um estrangeiro por aqui!</p>
-                <form onSubmit={function (event) {
+                <Form onSubmit={function (event) {
                   event.preventDefault();
-                  router.push(`/quiz?name=${name}`);
+                  router.push(`/quiz?name=${name}&nv=${dificuldade}`);
                 }}>
+
+                  <Form.Group controlId="dificuldadeForm">
+                    <Form.Label>Dificuldade</Form.Label>
+                    <Form.Control as="select" onChange={event => setDificuldade(event.target.value)}>
+                      <option value="facil">Fácil</option>
+                      <option value="medio">Médio</option>
+                      <option value="dificil">Difícil</option>
+                    </Form.Control>
+                  </Form.Group>
+
+                  <Form.Label>Nome</Form.Label>
                   <Input
                       name="nomeDoUsuario"
                       placeholder="Digite seu nome para começar a jogar!"
@@ -42,7 +56,7 @@ export default function Home() {
                   <Button type="submit" disabled={name.length === 0}>
                     Jogar
                   </Button>
-                </form>
+                </Form>
               </Widget.Content>
             </Widget>
             <Widget>

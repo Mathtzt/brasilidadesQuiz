@@ -64,6 +64,130 @@
       ]
     }
   ],
+  "questionsMedium": [
+    {
+      "image": "/images/questoes/q1-medio.jpg",
+      "title": "",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q2-medio.jpg",
+      "title": "",
+      "description": "",
+      "answer": 1,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q3-medio.jpg",
+      "title": "",
+      "description": "",
+      "answer": 3,
+      "alternatives": [
+        "",
+        "R",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q4-medio.jpg",
+      "title": "",
+      "description": "",
+      "answer": 0,
+      "alternatives": [
+        "S",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q5-medio.jpg",
+      "title": "Quem proclamou a Independência do Brasil?",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
+  "questionsDifficult": [
+    {
+      "image": "/images/questoes/q1-dificil.jpg",
+      "title": "",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q2-dificil.jpg",
+      "title": "",
+      "description": "",
+      "answer": 1,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q3-dificil.jpg",
+      "title": "",
+      "description": "",
+      "answer": 3,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q4-dificil.jpg",
+      "title": "",
+      "description": "",
+      "answer": 0,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    },
+    {
+      "image": "/images/questoes/q5-dificil.jpg",
+      "title": "",
+      "description": "",
+      "answer": 2,
+      "alternatives": [
+        "",
+        "",
+        "",
+        ""
+      ]
+    }
+  ],
   "external": [
     ""
   ],
