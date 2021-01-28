@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from 'next/router'
 
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
@@ -10,54 +11,12 @@ import Widget from "../src/components/Widget";
 import Button from "../src/components/Button";
 import QuizContainer from "../src/components/QuizContainer";
 import AlternativesForm from "../src/components/AlternativeForm";
+import NavHomePage from "../src/components/NavToHome";
 
-function getSomatorioAcertosQuiz(results) {
-    return (
-        results.reduce((somatorioAtual, resultAtual) => {
-            const isAcerto = resultAtual === true;
-            if (isAcerto) {
-                return somatorioAtual + 1;
-            }
-            return somatorioAtual;
-        }, 0)
-    )
-}
-
-function ResultWidget({results}) {
-    return(
-        <Widget>
-            <Widget.Header>
-                Tela de Resultados
-            </Widget.Header>
-            <Widget.Content>
-                <div>Você acertou {getSomatorioAcertosQuiz(results)} questões, parabéns!</div>
-                <ul>
-                    {results.map((result, index) => (
-                        <li>
-                            Questão {index+1}: {' '}
-                            {result === true
-                                ? 'Acertou'
-                                : 'Errou'
-                            }
-                        </li>
-                    ))}
-                </ul>
-            </Widget.Content>
-        </Widget>
-    );
-}
-
-function LoadingWidget() {
-    return(
-        <Widget>
-            <Widget.Header>
-                Preparado? ...
-            </Widget.Header>
-            <Widget.Content>
-                <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} padding={'15px'}/>
-            </Widget.Content>
-        </Widget>
-    );
+const screenStates = {
+    LOADING: 'loading',
+    QUIZ: 'quiz',
+    RESULT: 'result'
 }
 
 function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addResult}) {
@@ -139,12 +98,6 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
     );
 }
 
-const screenStates = {
-    LOADING: 'loading',
-    QUIZ: 'quiz',
-    RESULT: 'result'
-}
-
 export default function QuizPage() {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING);
     const [questionIndex, setQuestionIndex] = React.useState(0);
@@ -189,9 +142,69 @@ export default function QuizPage() {
                         />
                     )};
                 {screenState === screenStates.RESULT && (
-                    <ResultWidget results={results}/>
+                    <ResultWidget results={results} key={screenStates.RESULT}/>
                 )}
             </QuizContainer>
         </QuizBackground>
     )
 };
+
+function getDesempenhoMsg(results) {
+    const total = results.filter(x => x).length;
+    return total >= 3 ? 'Mandou muito bem,' : 'Não foi dessa vez estrangeiro,';
+}
+
+function getSomatorioAcertosQuiz(results) {
+    return (
+        results.reduce((somatorioAtual, resultAtual) => {
+            const isAcerto = resultAtual === true;
+            if (isAcerto) {
+                return somatorioAtual + 1;
+            }
+            return somatorioAtual;
+        }, 0)
+    )
+}
+
+function ResultWidget({results}) {
+    const router = useRouter()
+    const params = router.query;
+
+    return(
+        <Widget>
+            <Widget.Header>
+                Tela de Resultados
+            </Widget.Header>
+            <Widget.Content>
+                <p>{getDesempenhoMsg(results)} <strong>{params.name}</strong>!</p>
+                <div>Você fez um total de {getSomatorioAcertosQuiz(results) * 20} pontos.</div>
+
+                <NavHomePage />
+                {/*<ul>
+                    {results.map((result, index) => (
+                        <li>
+                            Questão {index+1}: {' '}
+                            {result === true
+                                ? 'Acertou'
+                                : 'Errou'
+                            }
+                        </li>
+                    ))}
+                </ul>*/}
+            </Widget.Content>
+        </Widget>
+    );
+}
+
+function LoadingWidget() {
+    return(
+        <Widget>
+            <Widget.Header>
+                Preparado? ...
+            </Widget.Header>
+            <Widget.Content>
+                <Loader type="ThreeDots" color="#00BFFF" height={80} width={80} padding={'15px'}/>
+            </Widget.Content>
+        </Widget>
+    );
+}
