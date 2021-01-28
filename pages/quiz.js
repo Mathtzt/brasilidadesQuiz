@@ -65,7 +65,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                     {question.alternatives.map((alternative, index) => {
                         const alternativeId = `alternativeId_${index}`;
                         const alternativeStatus = isCorrect ? 'SUCCESS' : 'ERROR';
-                        const isSelected = selectedAlternative == index;
+                        const isSelected = selectedAlternative === index;
 
                         return (
                             <Widget.Topic
@@ -95,13 +95,13 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                 </AlternativesForm>
             </Widget.Content>
         </Widget>
-    );
+    )
 }
 
 export default function QuizPage() {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING);
     const [questionIndex, setQuestionIndex] = React.useState(0);
-    const [results, setResults] = React.useState([])
+    const [results, setResults] = React.useState([]);
     const question = db.questions[questionIndex];
     const totalQuestions = db.questions.length;
 
@@ -131,7 +131,7 @@ export default function QuizPage() {
         <QuizBackground backgroundImage={db.bg}>
             <QuizContainer>
                 <QuizLogo />
-                {screenState === screenStates.LOADING && <LoadingWidget />};
+                {screenState === screenStates.LOADING && <LoadingWidget />}
                 {screenState === screenStates.QUIZ && (
                         <QuestionWidget
                         question={question}
@@ -140,14 +140,14 @@ export default function QuizPage() {
                         addResult={addResult}
                         onSubmit={handleSubmitQuiz}
                         />
-                    )};
+                    )}
                 {screenState === screenStates.RESULT && (
                     <ResultWidget results={results} key={screenStates.RESULT}/>
                 )}
             </QuizContainer>
         </QuizBackground>
     )
-};
+}
 
 function getDesempenhoMsg(results) {
     const total = results.filter(x => x).length;
