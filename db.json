@@ -55,7 +55,7 @@
       "image": "/images/questoes/q5-facil.jpg",
       "title": "Quem proclamou a Independência do Brasil?",
       "description": "",
-      "answer": 2,
+      "answer": 1,
       "alternatives": [
         "D. Pedro II",
         "D. Pedro I",
@@ -198,7 +198,7 @@
       "mainBg": "#1C1814",
       "secondaryBg": "#FFFFFF",
       "contrastText": "#FFFFFF",
-      "wrong": "#FF5722",
+      "wrong": "#bd2f2f",
       "success": "#4CAF50"
     },
     "borderRadius": "4px"

@@ -1,6 +1,5 @@
 import React from "react";
 import 'bootstrap/dist/css/bootstrap.min.css';
-import styled from 'styled-components'
 import { useRouter } from "next/router";
 import Form from 'react-bootstrap/Form';
 
