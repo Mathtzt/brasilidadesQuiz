@@ -1,8 +1,8 @@
 {
   "bg": "/images/bg-main.jpg",
   "bgMeta": "/images/homepage.jpg",
-  "title": "Quiz CSS da Alura",
-  "description": "Teste os seus conhecimentos sobre CSS e vamos ver quantos layouts você vai deixar de quebrar",
+  "title": "Quiz Brasilidades",
+  "description": "Teste os seus conhecimentos sobre o Brasil",
   "questions": [
     {
       "image": "/images/questoes/q1-facil.jpg",
