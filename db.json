@@ -190,7 +190,9 @@
     }
   ],
   "external": [
-    ""
+    "https://aluraquiz.edlanioj.vercel.app/",
+    "https://aluraquiz-wow.yuriramosc.vercel.app/",
+    "https://aluraquiz-css.omariosouto.vercel.app/"
   ],
   "theme": {
     "colors": {

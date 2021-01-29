@@ -4,14 +4,14 @@ import { useRouter } from 'next/router'
 import "react-loader-spinner/dist/loader/css/react-spinner-loader.css"
 import Loader from 'react-loader-spinner'
 
-import db from '../db.json';
-import QuizBackground from "../src/components/QuizBackground";
-import QuizLogo from "../src/components/QuizLogo";
-import Widget from "../src/components/Widget";
-import Button from "../src/components/Button";
-import QuizContainer from "../src/components/QuizContainer";
-import AlternativesForm from "../src/components/AlternativeForm";
-import NavHomePage from "../src/components/NavToHome";
+import db from '../../db.json';
+import QuizBackground from "../../src/components/QuizBackground";
+import QuizLogo from "../../src/components/QuizLogo";
+import Widget from "../../src/components/Widget";
+import Button from "../../src/components/Button";
+import QuizContainer from "../../src/components/QuizContainer";
+import AlternativesForm from "../../src/components/AlternativeForm";
+import NavHomePage from "../../src/components/NavToHome";
 
 const screenStates = {
     LOADING: 'loading',
