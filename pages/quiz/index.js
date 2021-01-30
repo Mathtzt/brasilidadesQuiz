@@ -12,6 +12,7 @@ import Button from "../../src/components/Button";
 import QuizContainer from "../../src/components/QuizContainer";
 import AlternativesForm from "../../src/components/AlternativeForm";
 import NavHomePage from "../../src/components/NavToHome";
+import BackLinkArrow from "../../src/components/BackLinkArrow";
 
 const screenStates = {
     LOADING: 'loading',
@@ -25,7 +26,7 @@ const dificuldadeStates = {
     DIFICIL: 'dificil'
 }
 
-function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addResult}) {
+function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addResult, isQuizExterno}) {
     const [selectedAlternative, setSelectedAlternative] = React.useState(undefined);
     const [isQuestionSubmited, setIsQuestionSubmited] = React.useState(false);
     const questionId = `question_${questionIndex}`
@@ -35,6 +36,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
     return (
         <Widget>
             <Widget.Header>
+                {isQuizExterno && <BackLinkArrow href="/" />}
                 <h3>
                     {`Pergunta ${questionIndex + 1} de ${totalQuestions}`}
                 </h3>
@@ -93,7 +95,7 @@ function QuestionWidget({question, totalQuestions, questionIndex, onSubmit, addR
                         );
                     })}
                     <Button type='submit' disabled={!hasAlternativeSelected}>
-                    Confirmar
+                        Confirmar
                     </Button>
 
                     {isQuestionSubmited && isCorrect && <p>Você acertou!</p>}
@@ -115,13 +117,14 @@ function getQuestoesByDificuldade() {
     }
 }
 
-export default function QuizPage() {
+export default function QuizPage({externalQuestions, externalBg, isQuizExterno}) {
     const [screenState, setScreenState] = React.useState(screenStates.LOADING);
     const [questionIndex, setQuestionIndex] = React.useState(0);
     const [results, setResults] = React.useState([]);
-    const dificuldadeQuestions = getQuestoesByDificuldade();
+    const dificuldadeQuestions = isQuizExterno ? externalQuestions : getQuestoesByDificuldade();
     const question = dificuldadeQuestions[questionIndex];
     const totalQuestions = dificuldadeQuestions.length;
+    const bg = isQuizExterno ? externalBg : db.bg;
 
     function addResult(result) {
         setResults([
@@ -146,7 +149,7 @@ export default function QuizPage() {
     }
 
     return (
-        <QuizBackground backgroundImage={db.bg}>
+        <QuizBackground backgroundImage={bg}>
             <QuizContainer>
                 <QuizLogo />
                 {screenState === screenStates.LOADING && <LoadingWidget />}
@@ -157,6 +160,7 @@ export default function QuizPage() {
                         totalQuestions={totalQuestions}
                         addResult={addResult}
                         onSubmit={handleSubmitQuiz}
+                        isQuizExterno={isQuizExterno}
                         />
                     )}
                 {screenState === screenStates.RESULT && (

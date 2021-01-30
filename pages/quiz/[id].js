@@ -1,5 +1,5 @@
 import React from "react";
-import QuizScreen from '../../src/screens/quiz';
+import QuizScreen from '../../pages/quiz';
 import {ThemeProvider} from "styled-components";
 
 export default function QuizDaGaleraPage({dbExterno}) {
@@ -8,6 +8,7 @@ export default function QuizDaGaleraPage({dbExterno}) {
             <QuizScreen
                 externalQuestions={dbExterno.questions}
                 externalBg={dbExterno.bg}
+                isQuizExterno={true}
             />
         </ThemeProvider>
     );
